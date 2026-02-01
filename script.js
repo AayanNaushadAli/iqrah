@@ -236,45 +236,45 @@ const pdfFileMap = {
 
 // Chapter Themes - Beautiful illustrated backgrounds for each chapter
 const chapterThemes = {
-    1: { 
-        name: 'Al-Fatiha - The Opening', 
-        svg: `<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" /><stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(#bg1)"/><circle cx="400" cy="150" r="80" fill="#FFF" opacity="0.9"/><path d="M 400 250 L 450 350 L 500 250 Z" fill="#FFD700" opacity="0.8"/><path d="M 300 250 L 350 350 L 400 250 Z" fill="#FFD700" opacity="0.6"/></svg>` 
+    1: {
+        name: 'Al-Fatiha - The Opening',
+        svg: `<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" /><stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(#bg1)"/><circle cx="400" cy="150" r="80" fill="#FFF" opacity="0.9"/><path d="M 400 250 L 450 350 L 500 250 Z" fill="#FFD700" opacity="0.8"/><path d="M 300 250 L 350 350 L 400 250 Z" fill="#FFD700" opacity="0.6"/></svg>`
     },
-    2: { 
-        name: 'Al-Baqarah - The Cow', 
-        svg: `<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#8B6914;stop-opacity:1" /><stop offset="100%" style="stop-color:#D2B48C;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(#bg2)"/><ellipse cx="400" cy="300" rx="120" ry="100" fill="#654321" opacity="0.9"/><circle cx="350" cy="240" r="25" fill="#000" opacity="0.8"/><circle cx="450" cy="240" r="25" fill="#000" opacity="0.8"/><path d="M 330 220 L 320 180" stroke="#000" stroke-width="4" opacity="0.8"/><path d="M 470 220 L 480 180" stroke="#000" stroke-width="4" opacity="0.8"/><ellipse cx="380" cy="180" rx="8" ry="15" fill="#000" opacity="0.7"/><ellipse cx="420" cy="180" rx="8" ry="15" fill="#000" opacity="0.7"/></svg>` 
+    2: {
+        name: 'Al-Baqarah - The Cow',
+        svg: `<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#8B6914;stop-opacity:1" /><stop offset="100%" style="stop-color:#D2B48C;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(#bg2)"/><ellipse cx="400" cy="300" rx="120" ry="100" fill="#654321" opacity="0.9"/><circle cx="350" cy="240" r="25" fill="#000" opacity="0.8"/><circle cx="450" cy="240" r="25" fill="#000" opacity="0.8"/><path d="M 330 220 L 320 180" stroke="#000" stroke-width="4" opacity="0.8"/><path d="M 470 220 L 480 180" stroke="#000" stroke-width="4" opacity="0.8"/><ellipse cx="380" cy="180" rx="8" ry="15" fill="#000" opacity="0.7"/><ellipse cx="420" cy="180" rx="8" ry="15" fill="#000" opacity="0.7"/></svg>`
     },
-    3: { 
-        name: 'Al-Imran - The Family', 
-        svg: `<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#CD5C5C;stop-opacity:1" /><stop offset="100%" style="stop-color:#F08080;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(#bg3)"/><circle cx="300" cy="300" r="30" fill="#FFE4E1" opacity="0.9"/><circle cx="500" cy="300" r="30" fill="#FFE4E1" opacity="0.9"/><circle cx="400" cy="200" r="35" fill="#FFE4E1" opacity="0.9"/><path d="M 300 330 L 400 250" stroke="#CD5C5C" stroke-width="3" opacity="0.6"/><path d="M 500 330 L 400 250" stroke="#CD5C5C" stroke-width="3" opacity="0.6"/></svg>` 
+    3: {
+        name: 'Al-Imran - The Family',
+        svg: `<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#CD5C5C;stop-opacity:1" /><stop offset="100%" style="stop-color:#F08080;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(#bg3)"/><circle cx="300" cy="300" r="30" fill="#FFE4E1" opacity="0.9"/><circle cx="500" cy="300" r="30" fill="#FFE4E1" opacity="0.9"/><circle cx="400" cy="200" r="35" fill="#FFE4E1" opacity="0.9"/><path d="M 300 330 L 400 250" stroke="#CD5C5C" stroke-width="3" opacity="0.6"/><path d="M 500 330 L 400 250" stroke="#CD5C5C" stroke-width="3" opacity="0.6"/></svg>`
     },
-    5: { 
-        name: 'Al-Maidah - The Table', 
-        svg: `<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#20B2AA;stop-opacity:1" /><stop offset="100%" style="stop-color:#48D1CC;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(#bg5)"/><rect x="250" y="250" width="300" height="150" fill="#8B4513" opacity="0.8" rx="10"/><circle cx="320" cy="300" r="20" fill="#FF6347" opacity="0.9"/><circle cx="400" cy="280" r="20" fill="#FFD700" opacity="0.9"/><circle cx="480" cy="300" r="20" fill="#228B22" opacity="0.9"/><rect x="200" y="420" width="400" height="40" fill="#8B4513" opacity="0.7"/></svg>` 
+    5: {
+        name: 'Al-Maidah - The Table',
+        svg: `<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#20B2AA;stop-opacity:1" /><stop offset="100%" style="stop-color:#48D1CC;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(#bg5)"/><rect x="250" y="250" width="300" height="150" fill="#8B4513" opacity="0.8" rx="10"/><circle cx="320" cy="300" r="20" fill="#FF6347" opacity="0.9"/><circle cx="400" cy="280" r="20" fill="#FFD700" opacity="0.9"/><circle cx="480" cy="300" r="20" fill="#228B22" opacity="0.9"/><rect x="200" y="420" width="400" height="40" fill="#8B4513" opacity="0.7"/></svg>`
     },
-    10: { 
-        name: 'Yunus - Jonah', 
-        svg: `<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg10" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#4B0082;stop-opacity:1" /><stop offset="100%" style="stop-color:#9932CC;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(#bg10)"/><ellipse cx="400" cy="350" rx="150" ry="100" fill="#1C1C3C" opacity="0.9"/><path d="M 300 300 Q 350 250 400 300 Q 450 250 500 300" fill="#87CEEB" opacity="0.7" stroke="#87CEEB" stroke-width="2"/><path d="M 320 320 L 340 340 L 360 320" fill="#FF69B4" opacity="0.8"/></svg>` 
+    10: {
+        name: 'Yunus - Jonah',
+        svg: `<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg10" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#4B0082;stop-opacity:1" /><stop offset="100%" style="stop-color:#9932CC;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(#bg10)"/><ellipse cx="400" cy="350" rx="150" ry="100" fill="#1C1C3C" opacity="0.9"/><path d="M 300 300 Q 350 250 400 300 Q 450 250 500 300" fill="#87CEEB" opacity="0.7" stroke="#87CEEB" stroke-width="2"/><path d="M 320 320 L 340 340 L 360 320" fill="#FF69B4" opacity="0.8"/></svg>`
     },
-    16: { 
-        name: 'An-Nahl - The Bee', 
-        svg: `<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg16" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" /><stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(#bg16)"/><ellipse cx="400" cy="300" rx="30" ry="40" fill="#000" opacity="0.8"/><circle cx="390" cy="260" r="15" fill="#000" opacity="0.8"/><circle cx="410" cy="260" r="15" fill="#000" opacity="0.8"/><path d="M 370 300 L 350 320" stroke="#FFD700" stroke-width="3" opacity="0.7"/><path d="M 430 300 L 450 320" stroke="#FFD700" stroke-width="3" opacity="0.7"/><circle cx="400" cy="150" r="60" fill="#FFD700" opacity="0.6"/><circle cx="420" cy="140" r="40" fill="#FFA500" opacity="0.5"/></svg>` 
+    16: {
+        name: 'An-Nahl - The Bee',
+        svg: `<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg16" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" /><stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(#bg16)"/><ellipse cx="400" cy="300" rx="30" ry="40" fill="#000" opacity="0.8"/><circle cx="390" cy="260" r="15" fill="#000" opacity="0.8"/><circle cx="410" cy="260" r="15" fill="#000" opacity="0.8"/><path d="M 370 300 L 350 320" stroke="#FFD700" stroke-width="3" opacity="0.7"/><path d="M 430 300 L 450 320" stroke="#FFD700" stroke-width="3" opacity="0.7"/><circle cx="400" cy="150" r="60" fill="#FFD700" opacity="0.6"/><circle cx="420" cy="140" r="40" fill="#FFA500" opacity="0.5"/></svg>`
     },
-    17: { 
-        name: 'Al-Isra - The Night Journey', 
-        svg: `<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg17" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#191970;stop-opacity:1" /><stop offset="100%" style="stop-color:#4169E1;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(#bg17)"/><circle cx="400" cy="150" r="50" fill="#FFFACD" opacity="0.9"/><circle cx="100" cy="100" r="8" fill="#FFF" opacity="0.8"/><circle cx="200" cy="80" r="6" fill="#FFF" opacity="0.7"/><circle cx="700" cy="120" r="7" fill="#FFF" opacity="0.75"/><circle cx="650" cy="90" r="5" fill="#FFF" opacity="0.6"/><path d="M 200 400 L 400 300 L 600 400" fill="#4169E1" opacity="0.6" stroke="#87CEEB" stroke-width="2"/></svg>` 
+    17: {
+        name: 'Al-Isra - The Night Journey',
+        svg: `<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg17" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#191970;stop-opacity:1" /><stop offset="100%" style="stop-color:#4169E1;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(#bg17)"/><circle cx="400" cy="150" r="50" fill="#FFFACD" opacity="0.9"/><circle cx="100" cy="100" r="8" fill="#FFF" opacity="0.8"/><circle cx="200" cy="80" r="6" fill="#FFF" opacity="0.7"/><circle cx="700" cy="120" r="7" fill="#FFF" opacity="0.75"/><circle cx="650" cy="90" r="5" fill="#FFF" opacity="0.6"/><path d="M 200 400 L 400 300 L 600 400" fill="#4169E1" opacity="0.6" stroke="#87CEEB" stroke-width="2"/></svg>`
     },
-    18: { 
-        name: 'Al-Kahf - The Cave', 
-        svg: `<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg18" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#8B0000;stop-opacity:1" /><stop offset="100%" style="stop-color:#DC143C;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(#bg18)"/><path d="M 150 250 Q 250 150 350 250 L 350 550 L 150 550 Z" fill="#333" opacity="0.9"/><path d="M 450 250 Q 550 150 650 250 L 650 550 L 450 550 Z" fill="#444" opacity="0.85"/><rect x="300" y="300" width="200" height="200" fill="#2C2C2C" opacity="0.8"/></svg>` 
+    18: {
+        name: 'Al-Kahf - The Cave',
+        svg: `<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg18" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#8B0000;stop-opacity:1" /><stop offset="100%" style="stop-color:#DC143C;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(#bg18)"/><path d="M 150 250 Q 250 150 350 250 L 350 550 L 150 550 Z" fill="#333" opacity="0.9"/><path d="M 450 250 Q 550 150 650 250 L 650 550 L 450 550 Z" fill="#444" opacity="0.85"/><rect x="300" y="300" width="200" height="200" fill="#2C2C2C" opacity="0.8"/></svg>`
     },
-    36: { 
-        name: 'Ya-Sin - Ya-Sin', 
-        svg: `<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg36" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#1E90FF;stop-opacity:1" /><stop offset="100%" style="stop-color:#87CEEB;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(#bg36)"/><circle cx="150" cy="100" r="8" fill="#FFD700" opacity="0.9"/><circle cx="400" cy="80" r="10" fill="#FFF" opacity="0.85"/><circle cx="650" cy="110" r="7" fill="#FFD700" opacity="0.8"/><circle cx="250" cy="150" r="6" fill="#FFF" opacity="0.7"/><circle cx="550" cy="140" r="8" fill="#FFF" opacity="0.75"/><polygon points="100,400 200,300 300,400 250,450 150,450" fill="#87CEEB" opacity="0.6"/><polygon points="500,400 600,300 700,400 650,450 550,450" fill="#87CEEB" opacity="0.6"/></svg>` 
+    36: {
+        name: 'Ya-Sin - Ya-Sin',
+        svg: `<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg36" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#1E90FF;stop-opacity:1" /><stop offset="100%" style="stop-color:#87CEEB;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(#bg36)"/><circle cx="150" cy="100" r="8" fill="#FFD700" opacity="0.9"/><circle cx="400" cy="80" r="10" fill="#FFF" opacity="0.85"/><circle cx="650" cy="110" r="7" fill="#FFD700" opacity="0.8"/><circle cx="250" cy="150" r="6" fill="#FFF" opacity="0.7"/><circle cx="550" cy="140" r="8" fill="#FFF" opacity="0.75"/><polygon points="100,400 200,300 300,400 250,450 150,450" fill="#87CEEB" opacity="0.6"/><polygon points="500,400 600,300 700,400 650,450 550,450" fill="#87CEEB" opacity="0.6"/></svg>`
     },
-    105: { 
-        name: 'Al-Fil - The Elephant', 
-        svg: `<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg105" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" /><stop offset="100%" style="stop-color:#D2B48C;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(#bg105)"/><ellipse cx="400" cy="350" rx="100" ry="120" fill="#654321" opacity="0.9"/><circle cx="350" cy="280" r="35" fill="#654321" opacity="0.9"/><circle cx="450" cy="280" r="35" fill="#654321" opacity="0.9"/><path d="M 380 380 L 370 480" stroke="#654321" stroke-width="20" stroke-linecap="round" opacity="0.9"/><rect x="320" y="480" width="160" height="40" fill="#8B7355" opacity="0.8"/></svg>` 
+    105: {
+        name: 'Al-Fil - The Elephant',
+        svg: `<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg105" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" /><stop offset="100%" style="stop-color:#D2B48C;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(#bg105)"/><ellipse cx="400" cy="350" rx="100" ry="120" fill="#654321" opacity="0.9"/><circle cx="350" cy="280" r="35" fill="#654321" opacity="0.9"/><circle cx="450" cy="280" r="35" fill="#654321" opacity="0.9"/><path d="M 380 380 L 370 480" stroke="#654321" stroke-width="20" stroke-linecap="round" opacity="0.9"/><rect x="320" y="480" width="160" height="40" fill="#8B7355" opacity="0.8"/></svg>`
     },
 };
 
@@ -306,12 +306,54 @@ document.addEventListener('DOMContentLoaded', () => {
     loadPdfJs();
     setupEventListeners();
     setupVerseToggle();
+    setupMobileMenu();
 });
 
 // Setup verse expansion functionality
 function setupVerseToggle() {
     const h1 = document.querySelector('.sidebar-header h1');
     // Note: Verse is now always visible in the header, no toggle needed
+}
+
+// Sidebar toggle for mobile
+function setupMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const sidebar = document.querySelector('.sidebar');
+    const appContainer = document.querySelector('.app-container');
+
+    // Create overlay if it doesn't exist
+    let overlay = document.querySelector('.sidebar-overlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'sidebar-overlay';
+        document.body.appendChild(overlay);
+    }
+
+    if (mobileMenuBtn && sidebar) {
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+
+        // Close when clicking overlay
+        overlay.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+        // Close when clicking outside (fallback)
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768 &&
+                sidebar.classList.contains('active') &&
+                !sidebar.contains(e.target) &&
+                e.target !== mobileMenuBtn &&
+                !mobileMenuBtn.contains(e.target)) {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        });
+    }
 }
 
 
@@ -369,10 +411,30 @@ function setupEventListeners() {
         }
     });
 
+    // Back button functionality
+    const backBtn = document.getElementById('backBtn');
+    if (backBtn) {
+        backBtn.addEventListener('click', () => {
+            // Hide reader, show welcome
+            welcomeScreen.style.display = 'flex';
+            reader.style.display = 'none';
+
+            // Show verse header
+            const verseHeader = document.querySelector('.verse-header');
+            if (verseHeader) {
+                verseHeader.style.display = 'flex'; // Restore flex display
+                document.documentElement.style.setProperty('--header-height', '140px'); // Mobile height
+            }
+
+            // Allow sidebar toggle again
+            document.querySelector('.mobile-menu-btn').style.display = 'block';
+        });
+    }
+
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (!pdfDoc) return;
-        
+
         if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
             e.preventDefault();
             if (currentPage > 1) {
@@ -389,28 +451,28 @@ function setupEventListeners() {
             }
         }
     });
-    
+
     // Add click handler to sidebar header to close reader and show welcome
     const sidebarHeader = document.querySelector('.sidebar-header');
     if (sidebarHeader) {
         sidebarHeader.addEventListener('click', () => {
             welcomeScreen.style.display = 'flex';
             reader.style.display = 'none';
-            
+
             // Show verse header again
             const verseHeader = document.querySelector('.verse-header');
             if (verseHeader) {
                 verseHeader.style.display = 'block';
                 document.documentElement.style.setProperty('--header-height', '160px');
             }
-            
+
             // Remove active state from chapters
             document.querySelectorAll('.chapter-item').forEach(item => {
                 item.classList.remove('active');
             });
         });
     }
-    
+
     // Add click handler for full Quran button
     const fullQuranBtn = document.getElementById('fullQuranBtn');
     if (fullQuranBtn) {
@@ -434,7 +496,7 @@ async function openFullQuran() {
     // Show reader, hide welcome
     welcomeScreen.style.display = 'none';
     reader.style.display = 'flex';
-    
+
     // Hide verse header when opening PDF
     const verseHeader = document.querySelector('.verse-header');
     if (verseHeader) {
@@ -474,7 +536,7 @@ async function openChapter(chapter) {
     // Show reader, hide welcome
     welcomeScreen.style.display = 'none';
     reader.style.display = 'flex';
-    
+
     // Hide verse header when opening PDF
     const verseHeader = document.querySelector('.verse-header');
     if (verseHeader) {
@@ -499,6 +561,13 @@ async function openChapter(chapter) {
 
     // Load PDF
     await loadPdf(chapter.id);
+
+    // Close sidebar on mobile
+    if (window.innerWidth <= 768) {
+        document.querySelector('.sidebar').classList.remove('active');
+        const overlay = document.querySelector('.sidebar-overlay');
+        if (overlay) overlay.classList.remove('active');
+    }
 }
 
 // Load PDF file with multiple fallback methods
@@ -510,7 +579,7 @@ async function loadPdf(chapterId) {
     }
 
     let pdfPath;
-    
+
     // Handle full Quran PDF
     if (chapterId === 'full-quran') {
         pdfPath = 'pdfs/quran-full.pdf';
@@ -524,7 +593,7 @@ async function loadPdf(chapterId) {
         }
         pdfPath = `pdfs/quran-chapter-${chapterId}-surah-${pdfSuffix}-pdf.pdf`;
     }
-    
+
     console.log('=== LOADING PDF ===');
     console.log('Chapter ID:', chapterId);
     console.log('PDF Path:', pdfPath);
@@ -537,29 +606,29 @@ async function loadPdf(chapterId) {
         console.log('Trying fetch...');
         const response = await fetch(pdfPath);
         console.log('Response status:', response.status);
-        
+
         if (!response.ok) {
             throw new Error(`HTTP ${response.status}`);
         }
-        
+
         const arrayBuffer = await response.arrayBuffer();
         console.log('PDF fetched, size:', arrayBuffer.byteLength);
-        
+
         const loadingTask = pdfjsLib.getDocument({ data: arrayBuffer });
         pdfDoc = await loadingTask.promise;
-        
+
         console.log('PDF loaded successfully! Pages:', pdfDoc.numPages);
-        
+
         loading.classList.remove('show');
         pdfCanvas.style.display = 'block';
-        
+
         renderCurrentPage();
         updatePageInfo();
         return;
     } catch (error) {
         console.error('Fetch failed:', error.message);
         console.log('Trying XMLHttpRequest...');
-        
+
         // Try XMLHttpRequest as fallback
         try {
             await loadPdfWithXHR(pdfPath);
@@ -567,7 +636,7 @@ async function loadPdf(chapterId) {
         } catch (xhrError) {
             console.error('XHR failed:', xhrError.message);
             console.log('Using embed fallback...');
-            
+
             // Last resort: use embed
             loadPdfViaEmbed(pdfPath);
         }
@@ -580,16 +649,16 @@ function loadPdfWithXHR(pdfPath) {
         const xhr = new XMLHttpRequest();
         xhr.open('GET', pdfPath, true);
         xhr.responseType = 'arraybuffer';
-        
-        xhr.onload = function() {
+
+        xhr.onload = function () {
             if (xhr.status === 200) {
                 try {
                     const arrayBuffer = xhr.response;
                     console.log('PDF fetched via XHR, size:', arrayBuffer.byteLength);
-                    
+
                     const loadingTask = pdfjsLib.getDocument({ data: arrayBuffer });
                     pdfDoc = loadingTask.promise;
-                    
+
                     pdfDoc.then(doc => {
                         console.log('PDF loaded via XHR! Pages:', doc.numPages);
                         loading.classList.remove('show');
@@ -610,12 +679,12 @@ function loadPdfWithXHR(pdfPath) {
                 reject(new Error(`HTTP ${xhr.status}`));
             }
         };
-        
-        xhr.onerror = function() {
+
+        xhr.onerror = function () {
             console.error('XHR network error');
             reject(new Error('Network error'));
         };
-        
+
         xhr.send();
     });
 }
@@ -649,31 +718,31 @@ async function renderCurrentPage() {
     try {
         const page = await pdfDoc.getPage(currentPage);
         const ctx = pdfCanvas.getContext('2d', { alpha: false });
-        
+
         // Calculate scale to fit container
         const container = document.querySelector('.pdf-container');
         if (!container) return;
-        
+
         // Get the container dimensions with padding accounted for
         const containerWidth = container.clientWidth - 30;
         const containerHeight = container.clientHeight - 30;
-        
+
         // Get the original viewport to calculate aspect ratio
         const baseViewport = page.getViewport({ scale: 1 });
         const pageWidth = baseViewport.width;
         const pageHeight = baseViewport.height;
-        
+
         // Calculate scale to fit within container
         const scaleX = containerWidth / pageWidth;
         const scaleY = containerHeight / pageHeight;
-        
+
         // Use the smaller scale to ensure it fits completely
         const scale = Math.min(scaleX, scaleY, 1.5);
-        
+
         const viewport = page.getViewport({ scale: scale });
         pdfCanvas.width = viewport.width;
         pdfCanvas.height = viewport.height;
-        
+
         // Set canvas CSS size to exactly match
         pdfCanvas.style.width = viewport.width + 'px';
         pdfCanvas.style.height = viewport.height + 'px';
@@ -689,7 +758,7 @@ async function renderCurrentPage() {
         };
 
         await page.render(renderContext).promise;
-        
+
         console.log(`Rendered page ${currentPage} with scale ${scale.toFixed(2)}`);
     } catch (error) {
         console.error('Error rendering page:', error);

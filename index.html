@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quran Reader - Read the Holy Quran</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Verse Header -->
     <div class="verse-header">
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle Menu">
+            <span>☰</span>
+        </button>
         <div class="verse-content">
-            <p class="verse-arabic">وَإِذَا سَأَلَكَ عِبَادِي عَنِّي فَإِنِّي قَرِيبٌۖ أُجِيبُ دَعۡوَةَ ٱلدَّاعِ إِذَا دَعَانِۖ فَلۡيَسۡتَجِيبُواْ لِي وَلۡيُؤۡمِنُواْ بِي لَعَلَّهُمۡ يَرۡشُدُونَ</p>
-            <p class="verse-english">"And when My servants ask you, [O Muhammad], concerning Me - indeed I am near. I respond to the invocation of the supplicant when he calls upon Me. So let them respond to Me [by obedience] and believe in Me that they may be [rightly] guided."</p>
+            <p class="verse-arabic">وَإِذَا سَأَلَكَ عِبَادِي عَنِّي فَإِنِّي قَرِيبٌۖ أُجِيبُ دَعۡوَةَ ٱلدَّاعِ إِذَا
+                دَعَانِۖ فَلۡيَسۡتَجِيبُواْ لِي وَلۡيُؤۡمِنُواْ بِي لَعَلَّهُمۡ يَرۡشُدُونَ</p>
+            <p class="verse-english">"And when My servants ask you, [O Muhammad], concerning Me - indeed I am near. I
+                respond to the invocation of the supplicant when he calls upon Me. So let them respond to Me [by
+                obedience] and believe in Me that they may be [rightly] guided."</p>
             <p class="verse-reference">Surah Al-Baqarah Ayat 186</p>
         </div>
     </div>
@@ -44,6 +52,9 @@
             <!-- PDF Reader -->
             <div class="reader" id="reader" style="display: none;">
                 <div class="reader-header">
+                    <button class="back-btn" id="backBtn" aria-label="Back to Home">
+                        <span>←</span>
+                    </button>
                     <h2 id="surahTitle">Surah Name</h2>
                     <div class="page-controls">
                         <span id="pageInfo">Page 1 of 10</span>
@@ -67,5 +78,5 @@
 
     <script src="script.js?v=2"></script>
 </body>
-</html>
 
+</html>

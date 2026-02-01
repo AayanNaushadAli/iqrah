@@ -47,6 +47,27 @@ body {
     overflow: hidden;
     transition: height 0.3s ease, opacity 0.3s ease;
     opacity: 1;
+    display: flex;
+    align-items: center;
+    /* Center items vertically */
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    /* Hidden on desktop */
+    background: transparent;
+    border: none;
+    color: #FFE5B4;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-right: 15px;
+    z-index: 200;
+}
+
+.mobile-menu-btn:hover {
+    opacity: 0.8;
 }
 
 .verse-header[style*="display: none"] {
@@ -285,6 +306,23 @@ footer.footer p {
 }
 
 /* ===== READER ===== */
+.back-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #8b9f7f;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+    background: rgba(139, 159, 127, 0.1);
+}
+
 .reader {
     display: flex;
     flex-direction: column;
@@ -420,4 +458,154 @@ footer.footer p {
     background: linear-gradient(135deg, #cbd5e0 0%, #a0aec0 100%);
     cursor: not-allowed;
     opacity: 0.6;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+@media screen and (max-width: 768px) {
+    :root {
+        --header-height: 140px;
+        /* Smaller header on mobile */
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        /* Show hamburger on mobile */
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        transform: translateX(-100%);
+        /* Hide by default on mobile */
+        width: 280px;
+        transition: transform 0.3s ease-in-out;
+        z-index: 200;
+        /* Higher than header content but below button if needed */
+        height: 100vh;
+        top: 0;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+        /* Show when active */
+    }
+
+    /* Main Content */
+    .main-content {
+        margin-left: 0;
+        /* No margin on mobile */
+        width: 100%;
+        margin-top: var(--header-height);
+        height: calc(100vh - var(--header-height));
+    }
+
+    /* Header adjustments */
+    .verse-header {
+        padding: 15px 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .verse-content {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 10px;
+    }
+
+    .verse-content .verse-arabic {
+        font-size: 0.95rem;
+        /* Smaller text */
+        margin-bottom: 5px;
+    }
+
+    .verse-content .verse-english {
+        font-size: 0.75rem;
+        display: none;
+        /* Hide English translation on very small screens to save space */
+    }
+
+    /* Show limited english text on mobile if needed */
+    @media (min-height: 700px) {
+        .verse-content .verse-english {
+            display: block;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    }
+
+    /* Welcome Screen */
+    .welcome-screen h2 {
+        font-size: 2rem;
+    }
+
+    .welcome-screen h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Reader Header */
+    .reader-header {
+        padding: 15px;
+        flex-direction: row;
+        /* Keep row for back button + title */
+        flex-wrap: wrap;
+        /* Allow wrapping if needed */
+        justify-content: center;
+        height: auto;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .back-btn {
+        display: block;
+        /* Show on mobile */
+        position: absolute;
+        /* Position absolute to not mess up centering too much or keep in flow */
+        left: 15px;
+    }
+
+    .btn-container {
+        display: flex;
+        gap: 10px;
+    }
+
+    .reader-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .page-controls {
+        gap: 10px;
+    }
+
+    /* Navigation Footer */
+    .navigation {
+        padding: 10px 15px;
+        height: 70px;
+    }
+
+    .nav-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Overlay when sidebar is open */
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 100;
+    }
+
+    .sidebar-overlay.active {
+        display: block;
+    }
 }

@@ -1,0 +1,18 @@
+# OS generated files
+.DS_Store
+.Thumbnails
+Thumbs.db
+
+# Environment and logs
+.env
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules
+.venv
+venv
+
+# Editor directories
+.vscode
+.idea
