@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quran Reader - Read the Holy Quran</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Verse Header -->
+    <div class="verse-header">
+        <div class="verse-content">
+            <p class="verse-arabic">وَإِذَا سَأَلَكَ عِبَادِي عَنِّي فَإِنِّي قَرِيبٌۖ أُجِيبُ دَعۡوَةَ ٱلدَّاعِ إِذَا دَعَانِۖ فَلۡيَسۡتَجِيبُواْ لِي وَلۡيُؤۡمِنُواْ بِي لَعَلَّهُمۡ يَرۡشُدُونَ</p>
+            <p class="verse-english">"And when My servants ask you, [O Muhammad], concerning Me - indeed I am near. I respond to the invocation of the supplicant when he calls upon Me. So let them respond to Me [by obedience] and believe in Me that they may be [rightly] guided."</p>
+            <p class="verse-reference">Surah Al-Baqarah Ayat 186</p>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <!-- Sidebar with Chapter List -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>📖 Iqrah</h1>
+                <h3>The Quran reading place ❤️</h3>
+                <p>Select a Surah to read</p>
+            </div>
+            <button class="full-quran-btn" id="fullQuranBtn">
+                <span>📕 Complete Quran</span>
+            </button>
+            <div class="chapter-list" id="chapterList">
+                <!-- Chapters will be loaded here -->
+            </div>
+        </aside>
+
+        <!-- Main Reading Area -->
+        <main class="main-content">
+            <!-- Welcome Screen -->
+            <div class="welcome-screen" id="welcomeScreen">
+                <h2>Welcome to Iqrah - Quran Reader</h2>
+                <h3>Your gateway to the Holy Quran</h3>
+                <p>Select a chapter from the list to start reading</p>
+            </div>
+
+            <!-- PDF Reader -->
+            <div class="reader" id="reader" style="display: none;">
+                <div class="reader-header">
+                    <h2 id="surahTitle">Surah Name</h2>
+                    <div class="page-controls">
+                        <span id="pageInfo">Page 1 of 10</span>
+                    </div>
+                </div>
+                <div class="pdf-container">
+                    <div class="pdf-background" id="pdfBackground"></div>
+                    <canvas id="pdfCanvas"></canvas>
+                    <div class="loading" id="loading">Loading...</div>
+                </div>
+                <div class="navigation">
+                    <button id="prevBtn" class="nav-button">← Previous</button>
+                    <button id="nextBtn" class="nav-button">Next →</button>
+                </div>
+                <footer class="footer">
+                    <p>Crafted by Musaffa with <span class="heart">❤️</span></p>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>
+
