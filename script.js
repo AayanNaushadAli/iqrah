@@ -431,6 +431,28 @@ function setupEventListeners() {
         });
     }
 
+    // Zoom controls
+    const zoomInBtn = document.getElementById('zoomInBtn');
+    const zoomOutBtn = document.getElementById('zoomOutBtn');
+
+    if (zoomInBtn && zoomOutBtn) {
+        window.userZoomLevel = 1.0;
+
+        zoomInBtn.addEventListener('click', () => {
+            if (window.userZoomLevel < 3.0) {
+                window.userZoomLevel += 0.25;
+                renderCurrentPage();
+            }
+        });
+
+        zoomOutBtn.addEventListener('click', () => {
+            if (window.userZoomLevel > 0.5) {
+                window.userZoomLevel -= 0.25;
+                renderCurrentPage();
+            }
+        });
+    }
+
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (!pdfDoc) return;
@@ -580,9 +602,12 @@ async function loadPdf(chapterId) {
 
     let pdfPath;
 
+    // GitHub CDN Base URL
+    const baseUrl = 'https://raw.githubusercontent.com/AayanNaushadAli/iqrah/main/pdfs/';
+
     // Handle full Quran PDF
     if (chapterId === 'full-quran') {
-        pdfPath = 'pdfs/quran-full.pdf';
+        pdfPath = baseUrl + 'quran-full.pdf';
     } else {
         // Get the PDF filename suffix from the map
         const pdfSuffix = pdfFileMap[chapterId];
@@ -591,7 +616,7 @@ async function loadPdf(chapterId) {
             loading.classList.add('show');
             return;
         }
-        pdfPath = `pdfs/quran-chapter-${chapterId}-surah-${pdfSuffix}-pdf.pdf`;
+        pdfPath = `${baseUrl}quran-chapter-${chapterId}-surah-${pdfSuffix}-pdf.pdf`;
     }
 
     console.log('=== LOADING PDF ===');
@@ -627,19 +652,7 @@ async function loadPdf(chapterId) {
         return;
     } catch (error) {
         console.error('Fetch failed:', error.message);
-        console.log('Trying XMLHttpRequest...');
-
-        // Try XMLHttpRequest as fallback
-        try {
-            await loadPdfWithXHR(pdfPath);
-            return;
-        } catch (xhrError) {
-            console.error('XHR failed:', xhrError.message);
-            console.log('Using embed fallback...');
-
-            // Last resort: use embed
-            loadPdfViaEmbed(pdfPath);
-        }
+        loading.textContent = 'Error loading PDF. Please check connection.';
     }
 }
 
@@ -711,7 +724,7 @@ function loadPdfViaEmbed(pdfPath) {
     loading.classList.remove('show');
 }
 
-// Render current page
+// Render current page with High DPI support
 async function renderCurrentPage() {
     if (!pdfDoc) return;
 
@@ -719,33 +732,42 @@ async function renderCurrentPage() {
         const page = await pdfDoc.getPage(currentPage);
         const ctx = pdfCanvas.getContext('2d', { alpha: false });
 
-        // Calculate scale to fit container
+        // Calculate container dimensions
         const container = document.querySelector('.pdf-container');
         if (!container) return;
 
-        // Get the container dimensions with padding accounted for
-        const containerWidth = container.clientWidth - 30;
-        const containerHeight = container.clientHeight - 30;
+        // Get available space
+        const containerWidth = container.clientWidth - 20; // Reduce padding slightly
+        const containerHeight = container.clientHeight - 20;
 
         // Get the original viewport to calculate aspect ratio
         const baseViewport = page.getViewport({ scale: 1 });
-        const pageWidth = baseViewport.width;
-        const pageHeight = baseViewport.height;
 
         // Calculate scale to fit within container
-        const scaleX = containerWidth / pageWidth;
-        const scaleY = containerHeight / pageHeight;
+        const scaleX = containerWidth / baseViewport.width;
+        const scaleY = containerHeight / baseViewport.height;
 
-        // Use the smaller scale to ensure it fits completely
-        const scale = Math.min(scaleX, scaleY, 1.5);
+        // Base scale to fit container (contain)
+        let fitScale = Math.min(scaleX, scaleY);
 
-        const viewport = page.getViewport({ scale: scale });
+        // High DPI Support + User Zoom
+        // Use devicePixelRatio (e.g. 2.0) * userZoom (e.g. 1.0, 1.25)
+        const pixelRatio = window.devicePixelRatio || 1;
+        const currentZoom = window.userZoomLevel || 1.0;
+
+        const renderScale = fitScale * pixelRatio * currentZoom;
+
+        // Render viewport with the high-res scale
+        const viewport = page.getViewport({ scale: renderScale });
+
+        // Set actual canvas pixel dimensions (High Res)
         pdfCanvas.width = viewport.width;
         pdfCanvas.height = viewport.height;
 
-        // Set canvas CSS size to exactly match
-        pdfCanvas.style.width = viewport.width + 'px';
-        pdfCanvas.style.height = viewport.height + 'px';
+        // Set CSS display dimensions (Visual Size)
+        // fitScale * currentZoom gives the visual size in CSS pixels
+        pdfCanvas.style.width = (viewport.width / pixelRatio) + 'px';
+        pdfCanvas.style.height = (viewport.height / pixelRatio) + 'px';
         pdfCanvas.style.maxWidth = 'none';
         pdfCanvas.style.maxHeight = 'none';
 
@@ -753,13 +775,12 @@ async function renderCurrentPage() {
         const renderContext = {
             canvasContext: ctx,
             viewport: viewport,
-            annotationLayer: null,
-            textLayer: null
+            enableWebHost: false
         };
 
         await page.render(renderContext).promise;
 
-        console.log(`Rendered page ${currentPage} with scale ${scale.toFixed(2)}`);
+        console.log(`Rendered page ${currentPage} at scale ${renderScale.toFixed(2)} (CSS scale ${fitScale.toFixed(2)})`);
     } catch (error) {
         console.error('Error rendering page:', error);
     }
